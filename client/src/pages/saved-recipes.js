@@ -10,7 +10,7 @@ export const SavedRecipes = () => {
     const fetchSavedRecipes = async () => {
       try {
         const response = await axios.get(
-          `https://recipe-app-5moo.onrender.com/recipes/savedRecipes/${userID}`
+          `https://recipe-app-3jaa.onrender.com/recipes/savedRecipes/${userID}`
         );
         setSavedRecipes(response.data.savedRecipes);
       } catch (err) {
