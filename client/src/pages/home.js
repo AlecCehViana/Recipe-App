@@ -68,9 +68,9 @@ export const Home = () => {
             <div className="instructions">
               <p>{recipe.instructions}</p>
             </div>
-            <ul>
-              <li>{recipe.ingredients}</li>
-            </ul>
+            {recipe.ingredients.map((ingredient, index) => (
+              <p key={index}>{ingredient}</p>
+            ))}
             <img src={recipe.imageUrl} alt={recipe.name} />
             <p>Cooking Time: {recipe.cookingTime} min</p>
           </li>
