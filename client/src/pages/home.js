@@ -68,6 +68,9 @@ export const Home = () => {
             <div className="instructions">
               <p>{recipe.instructions}</p>
             </div>
+            <ul>
+              <li>{recipe.ingredients}</li>
+            </ul>
             <img src={recipe.imageUrl} alt={recipe.name} />
             <p>Cooking Time: {recipe.cookingTime} minutes</p>
           </li>
