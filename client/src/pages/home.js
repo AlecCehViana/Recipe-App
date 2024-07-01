@@ -51,7 +51,7 @@ export const Home = () => {
   const isRecipeSaved = (id) => savedRecipes.includes(id);
 
   return (
-    <div>
+    <div className="home-container">
       <h1>Recipes</h1>
       <ul>
         {recipes.map((recipe) => (
@@ -59,19 +59,25 @@ export const Home = () => {
             <div>
               <h2>{recipe.name}</h2>
               <button
+              className="button type1"
                 onClick={() => saveRecipe(recipe._id)}
                 disabled={isRecipeSaved(recipe._id)}
               >
-                {isRecipeSaved(recipe._id) ? "Saved" : "Save"}
+               <span> {isRecipeSaved(recipe._id) ? "Saved" : "Save"} </span> 
+              
               </button>
             </div>
+            <img src={recipe.imageUrl} alt={recipe.name} />
             <div className="instructions">
-              <p>{recipe.instructions}</p>
+            
             </div>
+            <h4><b>Ingredients</b></h4>
             {recipe.ingredients.map((ingredient, index) => (
               <p key={index}>{ingredient}</p>
             ))}
-            <img src={recipe.imageUrl} alt={recipe.name} />
+            <h4><b>Instructions</b></h4>
+              <p>{recipe.instructions}</p>
+          
             <p>Cooking Time: {recipe.cookingTime} min</p>
           </li>
         ))}

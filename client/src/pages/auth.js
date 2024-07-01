@@ -59,7 +59,10 @@ const Login = () => {
             onChange={(event) => setPassword(event.target.value)}
           />
         </div>
-        <button type="submit">Login</button>
+        <button className="button" type="submit">
+         Login
+         
+        </button>
       </form>
     </div>
   );
@@ -106,7 +109,10 @@ const Register = () => {
             onChange={(event) => setPassword(event.target.value)}
           />
         </div>
-        <button type="submit">Register</button>
+        <button className="button" type="submit">
+              
+         Register
+        </button>
       </form>
     </div>
   );

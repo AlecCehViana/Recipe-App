@@ -29,11 +29,14 @@ export const SavedRecipes = () => {
             <div>
               <h2>{recipe.name}</h2>
             </div>
-            <p>{recipe.instructions}</p>
+            <img src={recipe.imageUrl} alt={recipe.name} />
+            <p><b>Ingredients</b></p>
             {recipe.ingredients.map((ingredient, index) => (
               <p key={index}>{ingredient}</p>
             ))}
-            <img src={recipe.imageUrl} alt={recipe.name} />
+            <p><b>Instructions</b></p>
+            <p>{recipe.instructions}</p>
+            
             <p>Cooking Time: {recipe.cookingTime} min</p>
           </li>
         ))}
